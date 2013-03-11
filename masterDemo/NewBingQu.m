@@ -7,7 +7,8 @@
 //
 
 #import "NewBingQu.h"
-
+#import "GCDiscreetNotificationView.h"
+#import "BingQu.h"
 @interface NewBingQu ()
 
 @end
@@ -26,7 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    inputTextField.autocorrectionType = UITextAutocapitalizationTypeNone;
+    inputTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    inputTextField.returnKeyType = UIReturnKeyDone;
+    inputTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    inputTextField.keyboardType = UIKeyboardTypeDefault;
+    inputTextField.delegate = self;
 }
 - (IBAction)hide:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
