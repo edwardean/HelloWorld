@@ -35,4 +35,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark TableView Delegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellID = @"Cell";
+    UITableViewCell *cell  =[tableView dequeueReusableCellWithIdentifier:CellID];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+    }
+    cell.textLabel.text = @"Hello";
+return cell;
+}
+#pragma mark -
 @end
