@@ -121,12 +121,11 @@
     FMDatabase *dataBase = [dataBaseManager createDataBase];
     BOOL isOK = NO;
     if ([dataBase open]) {
-        isOK = [dataBase executeUpdate:@"INSERT INTO Medicine (Name,Specifi,Content) VALUES (?,?,?)",
+            isOK = [dataBase executeUpdate:@"INSERT INTO Medicine (Name,Specifi,Content) VALUES (?,?,?)",
                          _name,
                          _specifi,
                          _content];
     }
-    
     [dataBase close];
     return isOK;
 }

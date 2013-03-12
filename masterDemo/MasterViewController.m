@@ -16,7 +16,8 @@
 #import "ViewController1.h"
 
 #import "tableViewController.h"
-
+#import "dataBaseManager.h"
+#import "FMDatabase.h"
 #import "AppDelegate.h"
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -45,16 +46,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-//    UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)] autorelease];
-//    self.navigationItem.rightBarButtonItem = addButton;
+	
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
     NSArray *arry = [NSArray arrayWithObjects:@"信息录入",@"查看",@"查询信息",@"设置", nil];
     [_objects addObjectsFromArray:arry];
+    dataBaseManager *manager = [[dataBaseManager alloc] init];
+    FMDatabase *dataBase = [dataBaseManager createDataBase];
+    if ([dataBase open]) {
+        if ([manager createTable]) {
+            debugLog(@"建表成功");
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -104,7 +104,7 @@
 		CA84EBBA16EEBFED00B95A04 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		CA84EBC516EEC0BF00B95A04 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
 		CA84EBC716EEC0C200B95A04 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../Icon-72@2x.png"; sourceTree = "<group>"; };
-		CA84EBC916EEC67800B95A04 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		CA84EBC916EEC67800B95A04 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		CA899E4E16E6C1570037F0CD /* NewBingQu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewBingQu.h; sourceTree = "<group>"; };
 		CA899E4F16E6C1570037F0CD /* NewBingQu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBingQu.m; sourceTree = "<group>"; };
 		CA899E5016E6C1570037F0CD /* NewBingQu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewBingQu.xib; sourceTree = "<group>"; };
@@ -174,7 +174,6 @@
 		CA331CEF16E2FC05004412F2 = {
 			isa = PBXGroup;
 			children = (
-				CA84EBC916EEC67800B95A04 /* Default-Landscape~ipad.png */,
 				CA331D0116E2FC05004412F2 /* masterDemo */,
 				CA331CFA16E2FC05004412F2 /* Frameworks */,
 				CA331CF916E2FC05004412F2 /* Products */,
@@ -235,6 +234,7 @@
 				CA331D0416E2FC05004412F2 /* InfoPlist.strings */,
 				CA331D0716E2FC05004412F2 /* main.m */,
 				CA331D0916E2FC05004412F2 /* masterDemo-Prefix.pch */,
+				CA84EBC916EEC67800B95A04 /* Default-Landscape~ipad.png */,
 				CA331D0D16E2FC05004412F2 /* Default.png */,
 				CA331D0F16E2FC05004412F2 /* Default@2x.png */,
 				CA331D1116E2FC05004412F2 /* Default-568h@2x.png */,
