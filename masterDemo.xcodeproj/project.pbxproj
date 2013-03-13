@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA2ABC5616EF0DAD0001EEDA /* MedInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2ABC5516EF0DAD0001EEDA /* MedInfoCell.m */; };
+		CA2ABC5816EF0DC70001EEDA /* MedInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2ABC5716EF0DC70001EEDA /* MedInfoCell.xib */; };
 		CA331CFC16E2FC05004412F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA331CFB16E2FC05004412F2 /* UIKit.framework */; };
 		CA331CFE16E2FC05004412F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA331CFD16E2FC05004412F2 /* Foundation.framework */; };
 		CA331D0016E2FC05004412F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA331CFF16E2FC05004412F2 /* CoreGraphics.framework */; };
@@ -66,6 +68,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA2ABC5416EF0DAD0001EEDA /* MedInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedInfoCell.h; sourceTree = "<group>"; };
+		CA2ABC5516EF0DAD0001EEDA /* MedInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedInfoCell.m; sourceTree = "<group>"; };
+		CA2ABC5716EF0DC70001EEDA /* MedInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedInfoCell.xib; sourceTree = "<group>"; };
 		CA331CF816E2FC05004412F2 /* masterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = masterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA331CFB16E2FC05004412F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA331CFD16E2FC05004412F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -260,6 +265,9 @@
 				CA899E9816E7104B0037F0CD /* InputNewRecord.h */,
 				CA899E9916E7104B0037F0CD /* InputNewRecord.m */,
 				CA899E9A16E7104B0037F0CD /* InputNewRecord.xib */,
+				CA2ABC5416EF0DAD0001EEDA /* MedInfoCell.h */,
+				CA2ABC5516EF0DAD0001EEDA /* MedInfoCell.m */,
+				CA2ABC5716EF0DC70001EEDA /* MedInfoCell.xib */,
 			);
 			name = enteringData;
 			sourceTree = "<group>";
@@ -416,6 +424,7 @@
 				CA84EBC616EEC0BF00B95A04 /* Icon-72.png in Resources */,
 				CA84EBC816EEC0C200B95A04 /* Icon-72@2x.png in Resources */,
 				CA84EBCA16EEC67800B95A04 /* Default-Landscape~ipad.png in Resources */,
+				CA2ABC5816EF0DC70001EEDA /* MedInfoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +463,7 @@
 				CA899EA216E7293D0037F0CD /* BingQu.m in Sources */,
 				CAA812C116E81FC900C147E1 /* Record.m in Sources */,
 				CA80CF3616EB91A9009BC8B4 /* GCDiscreetNotificationView.m in Sources */,
+				CA2ABC5616EF0DAD0001EEDA /* MedInfoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

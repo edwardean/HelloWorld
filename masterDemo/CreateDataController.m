@@ -116,7 +116,7 @@
      [detailViewController release];
      */
     NSUInteger row = [indexPath row];
-    UIViewController *controller = [[UIViewController alloc] init];
+    UIViewController *controller = [[[UIViewController alloc] init] autorelease];
     NewMedicine *newMedicine = [[NewMedicine alloc] initWithNibName:@"NewMedicine" bundle:nil];
     newMedicine.modalPresentationStyle = UIModalPresentationFormSheet;
     
@@ -131,15 +131,19 @@
     switch (row) {
         case 0:
             controller = [newMedicine retain];
+            [newMedicine release];
             break;
         case 1:
             controller = [newOffice retain];
+            [newOffice release];
             break;
         case 2:
-            controller = [newBingQu retain];
+            controller = [newBingQu  retain];
+            [newBingQu release];
             break;
         case 3:
             controller = [newRecord retain];
+            [newRecord release];
             break;
         default:
             break;
@@ -149,6 +153,5 @@
     [newOffice release];
     [newBingQu release];
     [newRecord release];
-    [controller release];
 }
 @end

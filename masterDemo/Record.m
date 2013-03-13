@@ -18,7 +18,7 @@
     if ([dataBase open]) {
         FMResultSet *resultSet1 = [dataBase executeQuery:@"SELECT * FROM Record"];
         NSDictionary *recordDic = [NSDictionary dictionary];
-        NSDictionary *detailDic = [NSDictionary dictionary];
+        NSDictionary *detailDic = nil;//[NSDictionary dictionary];
         while ([resultSet1 next]) {
             NSString *ID = [resultSet1 stringForColumn:@"id"];//第一张表的id主键
             NSString *PatientName = [resultSet1 stringForColumn:@"PatientName"];//第一张表的PatientName
@@ -47,7 +47,7 @@
     if ([dataBase open]) {
         FMResultSet *resultSet1 = [dataBase executeQuery:@"SELECT * FROM Record WHERE PatientName = ?",patientName];
         NSDictionary *recordDic = [NSDictionary dictionary];
-        NSDictionary *detailDic = [NSDictionary dictionary];
+        NSDictionary *detailDic = nil;//[NSDictionary dictionary];
         while ([resultSet1 next]) {
             NSString *ID = [resultSet1 stringForColumn:@"id"];
             NSString *PatientName = [resultSet1 stringForColumn:@"PatientName"];
@@ -58,7 +58,7 @@
                 NSString *Name = [resultSet2 stringForColumn:@"Name"];
                 NSString *Count = [resultSet2 stringForColumn:@"Count"];
                 detailDic = [NSDictionary dictionaryWithObjectsAndKeys:Name,@"Name",Count,@"Count", nil];
-                [detailArray addObject:detailArray];
+                [detailArray addObject:detailDic];
             }
         recordDic = [NSDictionary dictionaryWithObjectsAndKeys:PatientName,@"PatientName",Office,@"Office",detailArray,@"Detail", nil];
         }
@@ -77,7 +77,7 @@
         
         FMResultSet *resultSet1 = [dataBase executeQuery:@"SELECT * FROM Record WHERE Office = ?",office];
         NSDictionary *recordDic = [NSDictionary dictionary];
-        NSDictionary *detailDic = [NSDictionary dictionary];
+        NSDictionary *detailDic = nil;//[NSDictionary dictionary];
         while ([resultSet1 next]) {
             NSString *ID = [resultSet1 stringForColumn:@"id"];
             NSString *PatientName = [resultSet1 stringForColumn:@"PatientName"];
@@ -88,7 +88,7 @@
                 NSString *Name = [resultSet2 stringForColumn:@"Name"];
                 NSString *Count = [resultSet2 stringForColumn:@"Count"];
                 detailDic = [NSDictionary dictionaryWithObjectsAndKeys:Name,@"Name",Count,@"Count", nil];
-                [detailArray addObject:detailArray];
+                [detailArray addObject:detailDic];
             }
             recordDic = [NSDictionary dictionaryWithObjectsAndKeys:PatientName,@"PatientName",Office,@"Office",detailArray,@"Detail", nil];
         }

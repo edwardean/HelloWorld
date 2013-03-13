@@ -46,7 +46,6 @@
     FMDatabase *dataBase = [dataBaseManager createDataBase];
     NSMutableArray *mutableArray = [NSMutableArray array];
     if ([dataBase open]) {
-
         FMResultSet *resultSet = [dataBase executeQuery:@"SELECT * FROM Medicine"];
         while ([resultSet next]) {
             NSString *NameStr = [resultSet stringForColumn:@"Name"];

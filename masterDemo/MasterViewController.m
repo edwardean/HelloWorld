@@ -59,6 +59,7 @@
             debugLog(@"建表成功");
         }
     }
+    [manager release];
 }
 
 - (void)didReceiveMemoryWarning

@@ -42,7 +42,7 @@
 
 - (IBAction)Save:(id)sender {
     debugMethod();
-    GCDiscreetNotificationView *gcd = [[GCDiscreetNotificationView alloc] initWithText:@"" showActivity:NO inPresentationMode:GCDiscreetNotificationViewPresentationModeTop inView:self.view];
+    GCDiscreetNotificationView *gcd = [[[GCDiscreetNotificationView alloc] initWithText:@"" showActivity:NO inPresentationMode:GCDiscreetNotificationViewPresentationModeTop inView:self.view] autorelease];
     if ([textField.text isEqualToString:@""]) {
         return;
     } else {
@@ -67,7 +67,6 @@
             }
         }
     }
-    [gcd release];
 }
 
 #pragma mark UITextField DelegateMethods

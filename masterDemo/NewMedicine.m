@@ -69,6 +69,7 @@
             NSMutableString *mutableStr = [specifiTextField.text mutableCopy];
             [mutableStr appendString:self.specifiStr];
             self.specifiTextField.text = mutableStr;
+            [mutableStr release];
         }
     }
     
@@ -216,8 +217,10 @@
             } else if ((range1.location>0)||(range2.location>0)) {
                 NSMutableString *mutableString = [specifiTextField.text mutableCopy];
                 [mutableString replaceCharactersInRange:NSMakeRange([mutableString length]-2, 2) withString:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
-                self.specifiTextField.text = [mutableString copy];
+                self.specifiTextField.text = mutableString;
+                [mutableString release];
             }
+            [str release];
         } else
             self.specifiStr = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
     }
