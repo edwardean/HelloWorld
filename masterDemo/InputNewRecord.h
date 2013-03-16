@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface InputNewRecord : UIViewController <UISearchBarDelegate,UISearchDisplayDelegate,UITableViewDataSource,UITableViewDelegate> {
-    IBOutlet UISegmentedControl *segment;
     IBOutlet UITableView *table;
 }
 
-@property (nonatomic, retain) UISegmentedControl *segment;
 @property (nonatomic, retain) UITableView *table;
+@property (nonatomic, strong) UINavigationController *nav;
 @end

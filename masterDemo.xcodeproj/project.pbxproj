@@ -57,14 +57,12 @@
 		CA8A3F7216E4DF3600EE826F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8A3F6D16E4DF3600EE826F /* FMResultSet.m */; };
 		CA8A3F7416E4DF5000EE826F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8A3F7316E4DF5000EE826F /* libsqlite3.dylib */; };
 		CAA812C116E81FC900C147E1 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA812C016E81FC900C147E1 /* Record.m */; };
-		CAC520B716E34B20007635C8 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC520B616E34B20007635C8 /* ViewController1.m */; };
-		CAC520BA16E34B32007635C8 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC520B916E34B32007635C8 /* ViewController2.m */; };
-		CAC520BD16E34B3B007635C8 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC520BC16E34B3B007635C8 /* ViewController3.m */; };
-		CAC520C016E35E1E007635C8 /* tableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC520BF16E35E1E007635C8 /* tableViewController.m */; };
 		CAC5210416E3680F007635C8 /* CreateDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC5210316E3680F007635C8 /* CreateDataController.m */; };
 		CAC5210716E36849007635C8 /* ScanInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC5210616E36849007635C8 /* ScanInfoController.m */; };
 		CAC5210A16E3685D007635C8 /* SearchInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC5210916E3685D007635C8 /* SearchInfoController.m */; };
 		CAC5210D16E3686B007635C8 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC5210C16E3686B007635C8 /* SettingController.m */; };
+		CAD94F0A16F1F00900C64F80 /* SelectBQ.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD94F0816F1F00900C64F80 /* SelectBQ.m */; };
+		CAD94F0B16F1F00900C64F80 /* SelectBQ.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD94F0916F1F00900C64F80 /* SelectBQ.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,14 +139,6 @@
 		CA8A3F7316E4DF5000EE826F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CAA812BF16E81FC900C147E1 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
 		CAA812C016E81FC900C147E1 /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
-		CAC520B516E34B20007635C8 /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
-		CAC520B616E34B20007635C8 /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
-		CAC520B816E34B32007635C8 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
-		CAC520B916E34B32007635C8 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
-		CAC520BB16E34B3B007635C8 /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
-		CAC520BC16E34B3B007635C8 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
-		CAC520BE16E35E1E007635C8 /* tableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableViewController.h; sourceTree = "<group>"; };
-		CAC520BF16E35E1E007635C8 /* tableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tableViewController.m; sourceTree = "<group>"; };
 		CAC5210216E3680F007635C8 /* CreateDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDataController.h; sourceTree = "<group>"; };
 		CAC5210316E3680F007635C8 /* CreateDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDataController.m; sourceTree = "<group>"; };
 		CAC5210516E36849007635C8 /* ScanInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanInfoController.h; sourceTree = "<group>"; };
@@ -157,6 +147,9 @@
 		CAC5210916E3685D007635C8 /* SearchInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchInfoController.m; sourceTree = "<group>"; };
 		CAC5210B16E3686B007635C8 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
 		CAC5210C16E3686B007635C8 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
+		CAD94F0716F1F00900C64F80 /* SelectBQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectBQ.h; sourceTree = "<group>"; };
+		CAD94F0816F1F00900C64F80 /* SelectBQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectBQ.m; sourceTree = "<group>"; };
+		CAD94F0916F1F00900C64F80 /* SelectBQ.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectBQ.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,14 +209,6 @@
 				CA331D1416E2FC05004412F2 /* MasterViewController.m */,
 				CA331D1616E2FC05004412F2 /* DetailViewController.h */,
 				CA331D1716E2FC05004412F2 /* DetailViewController.m */,
-				CAC520BE16E35E1E007635C8 /* tableViewController.h */,
-				CAC520BF16E35E1E007635C8 /* tableViewController.m */,
-				CAC520B516E34B20007635C8 /* ViewController1.h */,
-				CAC520B616E34B20007635C8 /* ViewController1.m */,
-				CAC520B816E34B32007635C8 /* ViewController2.h */,
-				CAC520B916E34B32007635C8 /* ViewController2.m */,
-				CAC520BB16E34B3B007635C8 /* ViewController3.h */,
-				CAC520BC16E34B3B007635C8 /* ViewController3.m */,
 				CA331D1916E2FC05004412F2 /* MasterViewController.xib */,
 				CA331D1C16E2FC05004412F2 /* DetailViewController.xib */,
 				CA331D0216E2FC05004412F2 /* Supporting Files */,
@@ -247,6 +232,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CA50A3DE16F2AFF700C255FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA8A3F5C16E4DF1100EE826F /* Config.h */,
+				CA8A3F5D16E4DF1100EE826F /* dataBaseManager.h */,
+				CA8A3F5E16E4DF1100EE826F /* dataBaseManager.m */,
+				CA8A3F5F16E4DF1100EE826F /* Medicine.h */,
+				CA8A3F6016E4DF1100EE826F /* Medicine.m */,
+				CA899E9D16E729250037F0CD /* Office.h */,
+				CA899E9E16E729250037F0CD /* Office.m */,
+				CA899EA016E7293D0037F0CD /* BingQu.h */,
+				CA899EA116E7293D0037F0CD /* BingQu.m */,
+				CAA812BF16E81FC900C147E1 /* Record.h */,
+				CAA812C016E81FC900C147E1 /* Record.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CA50A3DF16F2B01800C255FB /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				CAC5210216E3680F007635C8 /* CreateDataController.h */,
+				CAC5210316E3680F007635C8 /* CreateDataController.m */,
+				CAC5210516E36849007635C8 /* ScanInfoController.h */,
+				CAC5210616E36849007635C8 /* ScanInfoController.m */,
+				CAC5210816E3685D007635C8 /* SearchInfoController.h */,
+				CAC5210916E3685D007635C8 /* SearchInfoController.m */,
+				CAC5210B16E3686B007635C8 /* SettingController.h */,
+				CAC5210C16E3686B007635C8 /* SettingController.m */,
+			);
+			name = MainController;
+			sourceTree = "<group>";
+		};
 		CA6DAB2A16E61983005FC5BA /* enteringData */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +283,9 @@
 				CA899E9816E7104B0037F0CD /* InputNewRecord.h */,
 				CA899E9916E7104B0037F0CD /* InputNewRecord.m */,
 				CA899E9A16E7104B0037F0CD /* InputNewRecord.xib */,
+				CAD94F0716F1F00900C64F80 /* SelectBQ.h */,
+				CAD94F0816F1F00900C64F80 /* SelectBQ.m */,
+				CAD94F0916F1F00900C64F80 /* SelectBQ.xib */,
 				CA2ABC5416EF0DAD0001EEDA /* MedInfoCell.h */,
 				CA2ABC5516EF0DAD0001EEDA /* MedInfoCell.m */,
 				CA2ABC5716EF0DC70001EEDA /* MedInfoCell.xib */,
@@ -301,19 +322,10 @@
 		CA8A3F5B16E4DEED00EE826F /* DataController */ = {
 			isa = PBXGroup;
 			children = (
+				CA50A3DF16F2B01800C255FB /* MainController */,
+				CA50A3DE16F2AFF700C255FB /* Model */,
 				CA80CF3016EB8A24009BC8B4 /* GCDiscreetNotificationView */,
 				CA6DAB2A16E61983005FC5BA /* enteringData */,
-				CA8A3F5C16E4DF1100EE826F /* Config.h */,
-				CA8A3F5D16E4DF1100EE826F /* dataBaseManager.h */,
-				CA8A3F5E16E4DF1100EE826F /* dataBaseManager.m */,
-				CA8A3F5F16E4DF1100EE826F /* Medicine.h */,
-				CA8A3F6016E4DF1100EE826F /* Medicine.m */,
-				CA899E9D16E729250037F0CD /* Office.h */,
-				CA899E9E16E729250037F0CD /* Office.m */,
-				CA899EA016E7293D0037F0CD /* BingQu.h */,
-				CA899EA116E7293D0037F0CD /* BingQu.m */,
-				CAA812BF16E81FC900C147E1 /* Record.h */,
-				CAA812C016E81FC900C147E1 /* Record.m */,
 			);
 			name = DataController;
 			sourceTree = "<group>";
@@ -339,14 +351,6 @@
 			isa = PBXGroup;
 			children = (
 				CA8A3F5B16E4DEED00EE826F /* DataController */,
-				CAC5210216E3680F007635C8 /* CreateDataController.h */,
-				CAC5210316E3680F007635C8 /* CreateDataController.m */,
-				CAC5210516E36849007635C8 /* ScanInfoController.h */,
-				CAC5210616E36849007635C8 /* ScanInfoController.m */,
-				CAC5210816E3685D007635C8 /* SearchInfoController.h */,
-				CAC5210916E3685D007635C8 /* SearchInfoController.m */,
-				CAC5210B16E3686B007635C8 /* SettingController.h */,
-				CAC5210C16E3686B007635C8 /* SettingController.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -425,6 +429,7 @@
 				CA84EBC816EEC0C200B95A04 /* Icon-72@2x.png in Resources */,
 				CA84EBCA16EEC67800B95A04 /* Default-Landscape~ipad.png in Resources */,
 				CA2ABC5816EF0DC70001EEDA /* MedInfoCell.xib in Resources */,
+				CAD94F0B16F1F00900C64F80 /* SelectBQ.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,10 +444,6 @@
 				CA331D0C16E2FC05004412F2 /* AppDelegate.m in Sources */,
 				CA331D1516E2FC05004412F2 /* MasterViewController.m in Sources */,
 				CA331D1816E2FC05004412F2 /* DetailViewController.m in Sources */,
-				CAC520B716E34B20007635C8 /* ViewController1.m in Sources */,
-				CAC520BA16E34B32007635C8 /* ViewController2.m in Sources */,
-				CAC520BD16E34B3B007635C8 /* ViewController3.m in Sources */,
-				CAC520C016E35E1E007635C8 /* tableViewController.m in Sources */,
 				CAC5210416E3680F007635C8 /* CreateDataController.m in Sources */,
 				CAC5210716E36849007635C8 /* ScanInfoController.m in Sources */,
 				CAC5210A16E3685D007635C8 /* SearchInfoController.m in Sources */,
@@ -464,6 +465,7 @@
 				CAA812C116E81FC900C147E1 /* Record.m in Sources */,
 				CA80CF3616EB91A9009BC8B4 /* GCDiscreetNotificationView.m in Sources */,
 				CA2ABC5616EF0DAD0001EEDA /* MedInfoCell.m in Sources */,
+				CAD94F0A16F1F00900C64F80 /* SelectBQ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

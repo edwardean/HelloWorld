@@ -61,9 +61,9 @@ static FMDatabase *shareDataBase = nil;
     if ([fileManager fileExistsAtPath:dataBasePath]) {
         shareDataBase = [dataBaseManager createDataBase];
         if ([shareDataBase open]) {
-            NSString *sql = @"CREATE TABLE Medicine (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, Name text, Specifi text,Content text)";
+            NSString *sql = @"CREATE TABLE Medicine (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, Name text, Specifi text,Unit text,Content text,PYM text)";
             //Medicine药品表:
-            //id 编号，主键，不为空;  name 药品名称  specifi 规格(ml/mg);  Content 含量(ml/mg)
+            //id 编号，主键，不为空;  name 药品名称  specifi 规格;  Content 含量 Unit单位(mg/ml)
             
             NSString *sql2 = @"CREATE TABLE Office (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,Name text)";
             //Office表:

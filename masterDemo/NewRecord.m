@@ -13,7 +13,7 @@
 @end
 
 @implementation NewRecord
-@synthesize inputNewRecord;
+@synthesize inputNewRecord,selectBQ;
 @synthesize popoverController;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +47,15 @@
 - (IBAction)hide:(id)sender {
 
     [self dismissModalViewControllerAnimated:YES];
+}
+
+- (IBAction)showBQ:(id)sender {
+    if (popoverController == nil) {
+        popoverController = [[UIPopoverController alloc] initWithContentViewController:selectBQ];
+        CGRect popoverRect =  CGRectMake(130, 330, 0, 0);
+        [popoverController presentPopoverFromRect:popoverRect inView:self.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+        popoverController.delegate = self;
+    }
 }
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)PopoverController {
     

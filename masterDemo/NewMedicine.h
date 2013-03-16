@@ -14,12 +14,14 @@
     IBOutlet UITextField *nameTextField;
     IBOutlet UITextField *specifiTextField;
     IBOutlet UITextField *countTextField;
+    IBOutlet UITextField *pymTextField;
 }
 
 @property (nonatomic, retain) UITableView *specifiTable;
 @property (nonatomic, retain) UITextField *nameTextField;
 @property (nonatomic, retain) UITextField *specifiTextField;
 @property (nonatomic, retain) UITextField *countTextField;
+@property (nonatomic, retain) UITextField *pymTextField;
 - (IBAction)hide:(id)sender;
 - (IBAction)Save:(id)sender;
 @end

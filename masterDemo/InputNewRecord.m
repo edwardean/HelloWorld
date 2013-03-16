@@ -19,7 +19,7 @@
 @end
 
 @implementation InputNewRecord
-@synthesize table,segment;
+@synthesize table;
 @synthesize medArray;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,34 +30,28 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.medArray = [NSArray array];
     self.contentSizeForViewInPopover = CGSizeMake(375, 530);
-    segment.selectedSegmentIndex = 0;
-    medArray = [[Medicine findAllMedicineToArray] copy];
-    [segment addTarget:self action:@selector(segValueChanged:) forControlEvents:UIControlEventValueChanged];
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        self.medArray = [Medicine findAllMedicineToArray];
+        if ([medArray count]==[Medicine countAllMedicine]) {
+            debugLog(@"药品获取完毕");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.table reloadData];
+            });
+        }
+    });
+    
 }
-- (void)segValueChanged:(id)sender {
-    UISegmentedControl *segmentedControl = (UISegmentedControl *)sender;
-    NSInteger segmentIndex = segmentedControl.selectedSegmentIndex;
-    switch (segmentIndex) {
-        case 0:
-            self.medArray =[Medicine findAllMedicineToArray];
-            break;
-        case 1:
-            self.medArray = [BingQu findAllBingQuIntoArray];
-            break;
-        case 2:
-            self.medArray = [Office findAllOffcieIntoArray];
-            break;
-        default:
-            
-            break;
-    }
-    [table reloadData];
+- (void) viewDidAppear:(BOOL)animated {
+    
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -67,7 +61,7 @@
 - (void) viewDidUnload {
     [super viewDidUnload];
     medArray = nil;
-}
+   }
 #pragma mark TableView Delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -85,39 +79,27 @@
     if(!cell){
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID] autorelease];
     }
-
-    NSString *str = @"";
-    if (segment.selectedSegmentIndex == 0) {
             UINib *nib = [UINib nibWithNibName:@"MedInfoCell" bundle:nil];
             [self.table registerNib:nib forCellReuseIdentifier:CellIdentifier];
             MedInfoCell *Medcell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
             NSDictionary *dic = [medArray objectAtIndex:indexPath.row];
             Medcell.NameLabel.text = [NSString stringWithFormat:@"品名:%@",[dic objectForKey:@"Name"] ];
-            Medcell.SpecifiStr = [NSString stringWithFormat:@"规格:%@",[dic objectForKey:@"Specifi"] ];
+            Medcell.SpecifiStr = [NSString stringWithFormat:@"规格:%@%@",[dic objectForKey:@"Specifi"],[dic objectForKey:@"Unit"] ];
             Medcell.CountStr = [NSString stringWithFormat:@"产地:%@",[dic objectForKey:@"Content"] ];
+            Medcell.PYMStr = [NSString stringWithFormat:@"拼音码:%@",[dic objectForKey:@"PYM"]];
             cell = Medcell;
-        }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-      if (segment.selectedSegmentIndex == 1)  {
-           
-            str = [medArray objectAtIndex:indexPath.row];
-            cell.textLabel.text = str;
-
-        }
-
-       if (segment.selectedSegmentIndex == 2)  {
-            str = [medArray objectAtIndex:indexPath.row];
-            cell.textLabel.text = str;
-        }
-
+    
     return cell;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (segment.selectedSegmentIndex==0) {
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+   
         return 60;
-    }
-    return 44;
+}
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    debugMethod();
 }
 #pragma mark -
 

@@ -8,14 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "InputNewRecord.h"
+#import "SelectBQ.h"
 @interface NewRecord : UIViewController <UIPopoverControllerDelegate>
 
 {
     IBOutlet InputNewRecord *inputNewRecord;
+    IBOutlet SelectBQ *selectBQ;
 }
 
 @property (nonatomic, retain) InputNewRecord *inputNewRecord;
+@property (nonatomic, retain) SelectBQ *selectBQ;
 @property (nonatomic, retain) UIPopoverController *popoverController;
 -(IBAction)showPopover:(id)sender;
 -(IBAction)hide:(id)sender;
+- (IBAction)showBQ:(id)sender;
 @end

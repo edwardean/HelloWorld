@@ -13,9 +13,6 @@
 #import "ScanInfoController.h"
 #import "SearchInfoController.h"
 #import "SettingController.h"
-#import "ViewController1.h"
-
-#import "tableViewController.h"
 #import "dataBaseManager.h"
 #import "FMDatabase.h"
 #import "AppDelegate.h"
