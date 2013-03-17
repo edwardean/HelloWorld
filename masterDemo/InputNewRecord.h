@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InputNewRecord : UIViewController <UISearchBarDelegate,UISearchDisplayDelegate,UITableViewDataSource,UITableViewDelegate> {
+@interface InputNewRecord : UIViewController <UISearchBarDelegate,UISearchDisplayDelegate,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate> {
     IBOutlet UITableView *table;
 }
 
 @property (nonatomic, retain) UITableView *table;
-@property (nonatomic, strong) UINavigationController *nav;
+@property (nonatomic, retain) UITextField *field;
 @end

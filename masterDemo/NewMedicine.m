@@ -105,7 +105,7 @@
     if ([textField isEqual:specifiTextField]) {
         cs = [[NSCharacterSet characterSetWithCharactersInString:NUMBERSPERIOD]invertedSet];
     } else if ([textField isEqual:pymTextField]){
-        cs = [[NSCharacterSet characterSetWithCharactersInString:ALPHA]invertedSet];
+        cs = [[NSCharacterSet characterSetWithCharactersInString:ALPHANUM]invertedSet];
     } else
         return YES;
     NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];

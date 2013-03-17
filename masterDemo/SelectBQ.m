@@ -11,6 +11,7 @@
 @interface SelectBQ ()
 
 @property (nonatomic, retain) NSArray *array;
+@property (nonatomic, retain) NSIndexPath *lastPath;
 @end
 
 @implementation SelectBQ
@@ -30,6 +31,8 @@
 {
     [super viewDidLoad];
     self.array = [NSArray array];
+    self.lastPath = nil;
+    self.BQStr = @"NULL";
     self.contentSizeForViewInPopover = CGSizeMake(375, 530);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         self.array = [BingQu findAllBingQuIntoArray];
@@ -62,9 +65,44 @@
     }
     
     cell.textLabel.text = [self.array objectAtIndex:indexPath.row];
-    debugLog(@"%@",cell.textLabel.text);
+    
+    if ([self.lastPath isEqual:indexPath]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    BOOL isMarked = [[table cellForRowAtIndexPath:self.lastPath] accessoryType] == UITableViewCellAccessoryCheckmark ? YES : NO;
+    if (![indexPath isEqual:self.lastPath]) {
+
+        UITableViewCell *newCell = [tableView cellForRowAtIndexPath:indexPath];
+        newCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        
+        UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:self.lastPath];
+        oldCell.accessoryType = UITableViewCellAccessoryNone;
+        self.lastPath = indexPath;
+        self.BQStr = [array objectAtIndex:indexPath.row];
+        
+    } else {
+        UITableViewCell *newCell = [tableView cellForRowAtIndexPath:indexPath];
+        if (isMarked) {
+        self.BQStr = @"NULL";
+        newCell.accessoryType = UITableViewCellAccessoryNone;
+        } else {
+            newCell.accessoryType = UITableViewCellAccessoryCheckmark;
+            self.BQStr = [array objectAtIndex:indexPath.row];
+        }
+        
+    }
+    NSLog(@"%@",self.BQStr);
+
 }
 #pragma mark -
 - (void)didReceiveMemoryWarning

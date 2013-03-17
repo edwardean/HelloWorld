@@ -46,15 +46,15 @@
     if ([inputTextField.text isEqualToString:@""]) {
         return;
     } else {
-        if ([BingQu findTheSameBingQu:inputTextField.text]) {
-            NSString *str = [NSString stringWithFormat:@"%@已经录入过了",inputTextField.text];
+        if ([BingQu findTheSameBingQu:[inputTextField.text uppercaseString]]) {
+            NSString *str = [NSString stringWithFormat:@"%@已经录入过了",[inputTextField.text uppercaseString]];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"警告" message:str delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
             [alert show];
             [alert release];
         } else {
             
-            if ([BingQu createNewBingQu:inputTextField.text]) {
-                NSString *str = [NSString stringWithFormat:@"病区:%@创建成功",inputTextField.text];
+            if ([BingQu createNewBingQu:[inputTextField.text uppercaseString]]) {
+                NSString *str = [NSString stringWithFormat:@"病区:%@创建成功",[inputTextField.text uppercaseString]];
                 [gcd setTextLabel:str];
                 [gcd show:YES];
                 [gcd hideAnimatedAfter:1.0f];
@@ -83,6 +83,20 @@
     
 }
 
+- (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+//    NSCharacterSet *cs = nil;
+//    if ([textField isEqual:inputTextField]) {
+//        cs = [[NSCharacterSet characterSetWithCharactersInString:ALPHANUM]invertedSet];
+//    }
+//    else
+//        return YES;
+//    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+//	BOOL basicTest = [string isEqualToString:filtered];
+//	
+//	
+//	return basicTest;
+    return YES;
+}
 #pragma mark -
 - (void) viewDidUnload {
     
